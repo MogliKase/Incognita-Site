@@ -1,0 +1,376 @@
+/* ============================================================
+   INCÓGNITA: estilos da one-page
+   Paleta tirada do menu do jogo: noite índigo, prata do logo,
+   âmbar das janelas acesas, lua e verde-sálvia do moletom.
+   ============================================================ */
+
+:root {
+  --night: #0d0e1a;
+  --night-2: #121326;
+  --panel: #171830;
+  --line: #34365a;
+  --line-soft: #25274a;
+  --ash: #9a9ea0;
+  --ink: #ebeae4;
+  --ink-soft: #d3d5da;
+  --ink-dim: #b4b7c3;
+  --lamp: #e8a94a;
+  --lamp-dim: #8a6a35;
+  --moon: #f2d27a;
+  --sage: #6fae98;
+  --sage-light: #94c9b4;
+  --sage-deep: #16282b;
+
+  --font-display: 'Pixelify Sans', 'Courier New', monospace;
+  --font-body: 'Alegreya Sans', system-ui, sans-serif;
+  --font-label: 'Share Tech Mono', 'Courier New', monospace;
+
+  --maxw: 1160px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(900px 600px at 85% -5%, rgba(120, 125, 210, .20), transparent 60%), var(--night);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.55;
+  overflow-x: hidden;
+  position: relative;
+}
+img { max-width: 100%; height: auto;}
+a { color: var(--lamp); }
+a:hover { color: var(--moon); }
+:focus-visible { outline: 3px solid var(--sage); outline-offset: 3px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(34px, 4.4vw, 52px); line-height: 1.12; }
+h3 { font-size: 26px; line-height: 1.2; }
+p { margin: 0; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: 24px; }
+.section { padding-block: 96px; display: flex; flex-direction: column; gap: 40px; }
+.band { background: linear-gradient(180deg, transparent, rgba(13, 14, 28, .55) 18%, rgba(13, 14, 28, .55) 82%, transparent); }
+.head { display: flex; flex-direction: column; gap: 14px; }
+
+/* rótulos em fonte de máquina de escrever */
+.kicker, .label {
+  font-family: var(--font-label);
+  font-size: 14px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--lamp);
+}
+.kicker-ash, .label { color: var(--ash); }
+.kicker-teal, .label-teal { color: var(--sage-light); }
+.label-brass { color: var(--lamp); }
+
+/* ---------- botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0 30px;
+  background: var(--lamp); color: var(--night);
+  font-family: var(--font-body); font-weight: 700; font-size: 18px;
+  text-decoration: none; border: none; border-radius: 2px; cursor: pointer;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .25);
+  transition: filter .15s;
+}
+.btn:hover { filter: brightness(1.12); color: var(--night); }
+.btn[disabled] { opacity: .6; cursor: progress; }
+.link-quiet { color: var(--ink); font-size: 18px; text-underline-offset: 6px; }
+
+/* ---------- cabeçalho ---------- */
+.header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-block: 24px; }
+.wordmark { font-family: var(--font-display); font-size: 22px; letter-spacing: .16em; text-transform: uppercase; color: var(--lamp); }
+.nav { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 17px; }
+.nav a { color: var(--ink-dim); text-decoration: none; }
+.nav a:hover { color: var(--lamp); }
+.nav .nav-demo { color: var(--ink-dim); }
+
+/* ---------- abertura ---------- */
+.hero { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding-block: 56px 96px; }
+.hero-text { flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
+.hero h1 { font-size: clamp(52px, 8.4vw, 108px); line-height: 1; letter-spacing: .01em; }
+.slogan { font-family: var(--font-display); font-size: clamp(22px, 2.6vw, 30px); line-height: 1.35; color: var(--lamp); max-width: 22em; text-wrap: balance; }
+.pitch { font-size: 21px; color: var(--ink-dim); max-width: 30em; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+
+.plate { display: flex; flex-wrap: wrap; margin: 0; border: 1px solid var(--line); border-radius: 2px; max-width: 30em; }
+.plate div { flex: 1 1 100px; padding: 12px 16px; border-right: 1px solid var(--line); }
+.plate div:last-child { border-right: none; }
+.plate dt { font-family: var(--font-label); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ash); }
+.plate dd { margin: 0; font-size: 17px; }
+
+.hero-art { flex: 1 1 360px; min-width: 0; position: relative; max-width: 520px; width: 100%; margin: 0 auto; }
+.frame-hero { position: relative; z-index: 1; width: 100%; aspect-ratio: 549 / 465; border: 2px solid var(--lamp); box-shadow: 0 0 0 8px var(--night), 0 0 0 10px var(--lamp-dim); }
+
+/* engrenagens decorativas */
+.gear { position: absolute; z-index: 0; transform-box: fill-box; transform-origin: center; animation: spin 90s linear infinite; }
+.gear.rev { animation-direction: reverse; animation-duration: 60s; }
+.gear-a { right: -70px; top: -70px; width: 220px; height: 220px; }
+.gear-b { left: -60px; bottom: -60px; width: 160px; height: 160px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .gear { animation: none; } html { scroll-behavior: auto; } }
+
+/* ---------- molduras de imagem ----------
+   Cada .slot mostra um texto-guia por baixo. A <img> fica por cima;
+   se o arquivo não existir, o script esconde a <img> e o guia aparece. */
+.slot {
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px;
+  background-color: #181932;
+  background-image: repeating-linear-gradient(135deg, rgba(232, 169, 74, .07) 0 2px, transparent 2px 14px);
+}
+.slot-label { font-family: var(--font-label); font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--lamp); }
+.slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.slot.has-error img { display: none; }
+
+/* ---------- história ---------- */
+.story { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; padding-block: 96px; }
+.story-text { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.story-text p { max-width: 34em; color: var(--ink-soft); }
+.story-text .pull { font-family: var(--font-display); font-size: 22px; line-height: 1.4; color: var(--sage); border-top: 1px solid var(--line); padding-top: 22px; }
+.frame-story { flex: 1 1 380px; min-width: 0; aspect-ratio: 4 / 3; border: 1px solid var(--lamp-dim); }
+
+/* ---------- capítulos e recursos ---------- */
+.cards { display: flex; flex-wrap: wrap; gap: 24px; }
+.plaque { flex: 1 1 300px; min-width: 0; background: var(--panel); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+.plaque p { color: var(--ink-dim); }
+.plaque-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.plaque .label { font-size: 14px; letter-spacing: .18em; }
+.plaque-1 { border-color: var(--lamp-dim); border-top: 6px solid var(--ash); }
+.plaque-2 { border-top: 6px solid var(--lamp); }
+.plaque-3 { border-top: 6px solid var(--sage); }
+.tag { font-family: var(--font-label); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; background: var(--lamp); color: var(--night); padding: 3px 10px; }
+
+.feature { flex: 1 1 240px; min-width: 0; border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+.feature h3 { font-size: 22px; line-height: 1.25; }
+.feature p { font-size: 18px; color: var(--ink-dim); }
+.feature-todo { border-style: dashed; border-color: var(--lamp-dim); }
+
+/* ---------- personagens ---------- */
+.chars { display: flex; flex-wrap: wrap; gap: 32px; }
+.char { flex: 1 1 420px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.frame-char { flex: 0 1 200px; width: 200px; max-width: 100%; aspect-ratio: 3 / 4; border: 1px solid var(--lamp-dim); padding: 12px; }
+.frame-char .slot-label { font-size: 12px; }
+.char-text { flex: 1 1 200px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.char-text .kicker { font-size: 13px; letter-spacing: .18em; }
+.char-text h3 { font-size: 32px; }
+.char-text p { color: var(--ink-dim); }
+
+/* ---------- inspirações ---------- */
+.refs { display: flex; flex-wrap: wrap; gap: 40px; }
+.ref { flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; border-top: 2px solid var(--lamp); padding-top: 20px; }
+.ref .label { font-size: 13px; letter-spacing: .18em; }
+.ref p { color: var(--ink-dim); }
+
+/* ---------- demo ---------- */
+.cta { background: var(--sage-deep); border-top: 4px solid var(--lamp); }
+.cta-inner { max-width: 760px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 24px; text-align: center; align-items: center; }
+.cta h2 { color: #f1efe8; font-size: clamp(34px, 4.6vw, 56px); }
+.cta-text { color: #cfe3da; max-width: 30em; }
+.form { width: 100%; display: flex; flex-direction: column; gap: 14px; text-align: left; }
+.form-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.form input[type="email"] {
+  flex: 1 1 260px; min-width: 0; min-height: 52px; padding: 0 16px;
+  background: #0c1a1c; border: 2px solid var(--sage); border-radius: 2px;
+  color: #f1efe8; font-family: var(--font-body); font-size: 19px;
+}
+.form input::placeholder { color: #7da595; }
+.form-msg { min-height: 28px; font-size: 17px; color: #f1efe8; }
+.form-msg.ok { color: var(--sage-light); }
+.form-msg.erro { color: #ffb199; }
+
+/* ---------- rodapé ---------- */
+.footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; padding-block: 40px; font-size: 16px; color: var(--ash); }
+.wordmark-small { font-family: var(--font-display); letter-spacing: .14em; text-transform: uppercase; color: var(--lamp); }
+
+/* arte do jogo é pixel art: sem suavizar ao ampliar */
+.frame-hero img { image-rendering: pixelated; }
+.hero h1 { color: var(--ash); text-shadow: 0 0 40px rgba(242, 210, 122, .18); }
+.cta { background: linear-gradient(180deg, var(--sage-deep), #101a24); }
+
+/* ---------- cenário noturno de fundo ----------
+   UMA cena só para o site inteiro: o céu fica preso à janela e desliza devagar
+   enquanto a página rola (o JS atualiza --sy e --dim). Assim todas as seções
+   mostram o mesmo desenho, sem cortes nem repetições. */
+.scene {
+  position: fixed; left: 0; top: 0; width: 100%; height: 150vh; z-index: -2; pointer-events: none;
+  background: url("../assets/hero/noite.svg") center top / cover no-repeat;
+  transform: translate3d(0, var(--sy, 0px), 0);
+  will-change: transform;
+}
+/* escurece a esquerda (texto) e, conforme a rolagem avança, a noite fica mais funda */
+.scene::before { content: ""; position: absolute; inset: 0; background: var(--night); opacity: var(--dim, 0); }
+.scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13, 14, 26, .78), rgba(13, 14, 26, .15) 65%); }
+.btn { box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .25), 0 0 28px rgba(232, 169, 74, .28); }
+.frame-hero { box-shadow: 0 0 0 8px var(--night), 0 0 0 10px var(--lamp-dim), 0 0 70px rgba(120, 125, 210, .35); }
+.kicker, .label { text-transform: none; letter-spacing: .08em; font-size: 15px; }
+
+/* ---------- logo e imagens reais ---------- */
+.wordmark img { display: block; height: 30px; width: auto; }
+.hero h1 { font-size: 0; line-height: 0; }
+.hero .logo { width: min(100%, 560px); height: auto; filter: drop-shadow(0 0 30px rgba(242, 210, 122, .18)); }
+.slot img { image-rendering: pixelated; }
+.frame-char img { object-position: 50% 20%; }
+.frame-story img { object-position: 45% 50%; }
+
+/* ============ seções de baixo: a mesma noite ============ */
+.plaque, .feature, .btn, .form input[type="email"] { clip-path: polygon(0 8px,8px 8px,8px 0,calc(100% - 8px) 0,calc(100% - 8px) 8px,100% 8px,100% calc(100% - 8px),calc(100% - 8px) calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,8px calc(100% - 8px),0 calc(100% - 8px)); border-radius: 0; }
+.plaque { background: linear-gradient(180deg, var(--panel), var(--night-2)); padding: 32px; }
+.plaque-1 { border-top-color: var(--ash); }
+.plaque h3 { color: var(--ink); }
+.feature { background: rgba(23, 24, 48, .55); }
+.feature-todo { border-color: var(--sage); }
+
+.shots { display: flex; flex-wrap: wrap; gap: 24px; }
+.shots figure { flex: 1 1 360px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.shots img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 2px solid var(--lamp-dim); box-shadow: 0 0 0 6px var(--night), 0 0 0 8px var(--line), 0 20px 60px rgba(0, 0, 0, .5); image-rendering: pixelated; }
+.shots figcaption { padding-top: 10px; }
+
+.char { background: rgba(23, 24, 48, .5); border: 1px solid var(--line-soft); padding: 24px; }
+.char-text h3 { color: var(--moon); }
+.ref { border-top: 2px solid var(--line); position: relative; }
+.ref::before { content: ""; position: absolute; top: -2px; left: 0; width: 56px; height: 2px; background: var(--lamp); box-shadow: 0 0 12px var(--lamp); }
+
+.cta { position: relative; margin-top: 150px; border-top: none; background: linear-gradient(180deg, var(--sage-deep), #0f1a24 70%, var(--night)); }
+.cta::before { content: ""; position: absolute; left: 0; right: 0; top: -149px; height: 150px; background: url("../assets/bg/cidade.svg") bottom / 100% 100% no-repeat; pointer-events: none; }
+.cta-inner { padding-top: 72px; }
+.form input[type="email"] { background: #0a1519; }
+.form input[type="email"]:focus { outline: none; box-shadow: 0 0 0 3px rgba(111, 174, 152, .45); }
+
+.footer { border-top: 1px solid var(--line-soft); padding-block: 48px; background: var(--night); position: relative; z-index: 1; }
+.wordmark-small { color: var(--ash); }
+@media (max-width: 700px) { .cta { margin-top: 90px; } .cta::before { height: 90px; top: -89px; } }
+
+/* ============ site em várias páginas ============ */
+body { display: flex; flex-direction: column; min-height: 100vh; }
+main { flex: 1; }
+.nav a[aria-current="page"] { color: var(--ink); border-bottom: 2px solid var(--lamp); }
+.tile { text-decoration: none; color: inherit; transition: border-color .15s, background .15s; }
+.tile:hover { border-color: var(--lamp); background: rgba(23, 24, 48, .9); }
+.tile h3 { color: var(--moon); }
+main > section:first-child:not(.hero) { padding-top: 48px; }
+
+/* ============ animações ============ */
+.scene { animation: sceneIn 2.2s ease-out both; will-change: transform; }
+@keyframes sceneIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* abertura: o logo "se revela" em blocos, depois o resto sobe */
+.hero .logo { animation: logoIn 1.2s steps(16) .3s both; }
+@keyframes logoIn { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.hero-text > :nth-child(1) { animation: rise .6s ease-out .1s both; }
+.hero-text > :nth-child(3) { animation: rise .7s ease-out 1.5s both; }
+.hero-text > :nth-child(4) { animation: rise .7s ease-out 1.65s both; }
+.hero-text > :nth-child(5) { animation: rise .7s ease-out 1.8s both; }
+.hero-text > :nth-child(6) { animation: rise .7s ease-out 1.95s both; }
+.hero-art { animation: rise 1s ease-out .9s both; }
+.frame-hero { animation: float 7s ease-in-out 2s infinite alternate; }
+@keyframes float { to { transform: translateY(-8px); } }
+
+/* cards aparecem ao rolar, em passos (combina com pixel art) */
+.js .reveal { opacity: 0; transform: translateY(14px); }
+.js .reveal.in { opacity: 1; transform: none; transition: opacity .5s steps(5), transform .5s steps(5); transition-delay: var(--rd, 0s); }
+
+/* botões */
+.btn { transition: filter .15s, transform .1s; }
+.btn:active { transform: translateY(2px); }
+
+/* menu para celular */
+.nav-toggle { display: none; font: inherit; font-family: var(--font-label); color: var(--ink); background: transparent; border: 1px solid var(--line); padding: 8px 18px; cursor: pointer; }
+@media (max-width: 700px) {
+  .nav-toggle { display: inline-block; }
+  .nav { display: none; width: 100%; flex-direction: column; gap: 4px; padding: 8px 0 4px; }
+  .nav.open { display: flex; animation: rise .25s ease-out both; }
+  .nav a { padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---------- imagens das inspirações ---------- */
+.ref { gap: 14px; }
+.frame-ref { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--lamp-dim); box-shadow: 0 0 0 4px var(--night), 0 0 0 5px var(--line); margin-bottom: 8px; }
+.frame-ref .slot-label { font-size: 12px; }
+.frame-ref img { image-rendering: auto; }
+
+/* ---------- cabeçalho centralizado, sem logo ---------- */
+.header { justify-content: center; }
+.nav { justify-content: center; }
+@media (max-width: 700px) { .nav a { text-align: center; } }
+
+/* ============ mais animações ============ */
+
+/* 1. neblina em pixels passando devagar */
+.fog { position: fixed; left: 0; right: 0; bottom: 0; z-index: -1; pointer-events: none; background-repeat: repeat-x; background-position: left bottom; }
+.fog-1 { height: 300px; background-image: url("../assets/bg/neblina.svg"); background-size: 1600px 300px; opacity: .55; animation: fogA 160s linear infinite; }
+.fog-2 { height: 450px; background-image: url("../assets/bg/neblina.svg"); background-size: 2400px 450px; opacity: .35; animation: fogB 240s linear infinite; }
+@keyframes fogA { to { background-position-x: -1600px; } }
+@keyframes fogB { to { background-position-x: 2400px; } }
+
+/* 2. personagem atravessando a vila, antes da demo */
+.walker { position: absolute; bottom: calc(100% - 6px); left: -120px; width: 62px; height: 100px; z-index: 2; pointer-events: none;
+  background: url("../assets/char/walk.png") center bottom / contain no-repeat;
+  animation: cruzar 45s linear 3s infinite, passo .5s steps(1) infinite; }
+@keyframes cruzar { from { left: -120px; } to { left: 100%; } }
+@keyframes passo { 0% { translate: 0 0; rotate: 0deg; } 50% { translate: 0 -4px; rotate: 1.5deg; } }
+
+/* 3. slogan digitado, com cursor */
+.slogan.typing::after { content: ""; display: inline-block; width: .5em; height: 1em; margin-left: 4px; background: var(--lamp); vertical-align: -.12em; animation: cursor .8s steps(1) infinite; }
+.slogan.typed::after { content: ""; display: inline-block; width: .5em; height: 1em; margin-left: 4px; background: var(--lamp); vertical-align: -.12em; animation: cursor .8s steps(1) 4, sumir .01s 3.2s forwards; }
+@keyframes cursor { 50% { opacity: 0; } }
+@keyframes sumir { to { opacity: 0; } }
+
+/* 4. luz que segue o mouse (só em telas com mouse) */
+.light { position: fixed; left: 0; top: 0; width: 560px; height: 560px; margin: -280px 0 0 -280px; z-index: -1; pointer-events: none; opacity: 0; transition: opacity .6s;
+  background: radial-gradient(closest-side, rgba(232, 169, 74, .17), rgba(232, 169, 74, .05) 55%, transparent); }
+.light.on { opacity: 1; }
+@media (hover: none), (pointer: coarse) { .light { display: none; } }
+
+/* 5. transição entre páginas */
+body::after { content: ""; position: fixed; inset: 0; background: var(--night); z-index: 100; pointer-events: none; opacity: 0; animation: veilIn .55s ease-out both; }
+@keyframes veilIn { from { opacity: 1; } to { opacity: 0; } }
+@keyframes veilOut { from { opacity: 0; } to { opacity: 1; } }
+html.leaving body::after { animation: veilOut .25s ease-in both; }
+
+/* 6. galeria com zoom */
+.zoomable { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(8, 8, 18, .92); animation: veilIn .25s reverse both; cursor: zoom-out; }
+.lightbox img { max-width: min(96vw, 1200px); max-height: 86vh; width: auto; height: auto; border: 2px solid var(--lamp-dim); box-shadow: 0 0 0 8px var(--night), 0 0 80px rgba(120, 125, 210, .35); image-rendering: pixelated; }
+.lightbox button { position: absolute; top: 16px; right: 20px; font: inherit; font-family: var(--font-label); color: var(--ink); background: var(--night-2); border: 1px solid var(--line); padding: 10px 18px; cursor: pointer; }
+.lightbox p { position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; color: var(--ink-dim); font-size: 16px; }
+
+/* 7. brilho passando no botão principal */
+.hero .btn, .form .btn { position: relative; overflow: hidden; }
+.hero .btn::after, .form .btn::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, transparent 38%, rgba(255, 255, 255, .45) 50%, transparent 62%); transform: translateX(-130%); animation: brilho 5.5s ease-in-out 3s infinite; }
+@keyframes brilho { 0%, 65% { transform: translateX(-130%); } 100% { transform: translateX(130%); } }
+@media (max-width: 700px) { .walker { width: 46px; height: 74px; } }
+
+/* ============ one-page ============ */
+html { scroll-padding-top: 76px; }
+.topbar { position: sticky; top: 0; z-index: 60; background: rgba(13, 14, 26, .82); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line-soft); }
+.topbar .header { padding-block: 14px; }
+.nav a { padding-bottom: 2px; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
+.nav a[aria-current="true"] { color: var(--ink); border-bottom-color: var(--lamp); }
+main > section[id] { scroll-margin-top: 76px; }
+#inicio { padding-block: 56px 96px; }
+@media (max-width: 700px) { html { scroll-padding-top: 64px; } main > section[id] { scroll-margin-top: 64px; } }
+
+/* (fundos por seção removidos: a cena única .scene cobre o site todo) */
+
+/* ---------- criadores ---------- */
+.lead { color: var(--ink-soft); max-width: 36em; }
+.makers { display: flex; flex-wrap: wrap; gap: 24px; }
+.maker { flex: 1 1 230px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 24px; background: rgba(23, 24, 48, .72); border: 1px solid var(--line-soft); }
+.maker h3 { font-size: 24px; color: var(--moon); }
+.maker p { color: var(--ink-dim); font-size: 18px; }
+.maker .kicker { font-size: 13px; }
+.frame-maker { width: 100%; aspect-ratio: 1 / 1; border: 1px solid var(--lamp-dim); box-shadow: 0 0 0 4px var(--night), 0 0 0 5px var(--line); margin-bottom: 10px; padding: 12px; }
+.frame-maker .slot-label { font-size: 12px; }
+.frame-maker img { object-position: 50% 25%; }

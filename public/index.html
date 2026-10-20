@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incógnita</title>
+  <meta name="description" content="Incógnita é um jogo de investigação e quebra-cabeças em Libras para PC, usando mouse e teclado.">
+  <meta property="og:title" content="Incógnita">
+  <meta property="og:description" content="Onde o silêncio esconde mistérios, e suas mãos revelam o caminho.">
+  <!-- IMAGEM AQUI (opcional): assets/og-image.jpg  (1200 x 630) para quando o link for compartilhado -->
+  <meta property="og:image" content="assets/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Pixelify+Sans:wght@400;600&family=Share+Tech+Mono&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/minigame.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/minigame.js" defer></script>
+</head>
+<body>
+  <div class="scene" aria-hidden="true"></div>
+  <div class="fog fog-1" aria-hidden="true"></div>
+  <div class="fog fog-2" aria-hidden="true"></div>
+  <div class="light" aria-hidden="true"></div>
+  <div class="topbar">
+    <header class="wrap header">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav" aria-label="Seções"><a href="#inicio">Início</a><a href="#historia">História</a><a href="#capitulos">Capítulos</a><a href="#personagens">Personagens</a><a href="#recursos">Recursos</a><a href="#inspiracoes">Inspirações</a><a href="#criadores">Criadores</a><a href="#investigue">Mini-jogo</a><a href="#demo" class="nav-demo">Demo</a></nav>
+    </header>
+  </div>
+
+  <main>
+<section id="inicio" class="wrap hero">
+      <div class="hero-text">
+        <h1><img class="logo" src="assets/logo.png" alt="Incógnita"></h1>
+        <p class="slogan">Onde o silêncio esconde mistérios, e suas mãos revelam o caminho.</p>
+        <p class="pitch">Investigação e quebra-cabeças em Libras no PC usando mouse e teclado.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#investigue">Quero a demo</a>
+          <a class="link-quiet" href="#historia">Conheça a história</a>
+        </div>
+        <dl class="plate">
+          <div><dt>Plataforma</dt><dd>PC</dd></div>
+          <div><dt>Resolução</dt><dd>645 × 360</dd></div>
+          <div><dt>Fluidez</dt><dd>60 FPS</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-art">
+        <svg class="gear gear-a" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="88" fill="none" stroke="#34365a" stroke-width="16" stroke-dasharray="13.8 13.8"/>
+          <circle cx="100" cy="100" r="80" fill="#181932" stroke="#34365a" stroke-width="3"/>
+          <circle cx="100" cy="100" r="56" fill="none" stroke="#34365a" stroke-width="3"/>
+          <line x1="100" y1="44" x2="100" y2="156" stroke="#34365a" stroke-width="6"/>
+          <line x1="44" y1="100" x2="156" y2="100" stroke="#34365a" stroke-width="6"/>
+          <line x1="60" y1="60" x2="140" y2="140" stroke="#34365a" stroke-width="6"/>
+          <line x1="140" y1="60" x2="60" y2="140" stroke="#34365a" stroke-width="6"/>
+          <circle cx="100" cy="100" r="16" fill="#0d0e1a" stroke="#34365a" stroke-width="4"/>
+        </svg>
+        <svg class="gear gear-b rev" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="88" fill="none" stroke="#2a2c4a" stroke-width="16" stroke-dasharray="13.8 13.8"/>
+          <circle cx="100" cy="100" r="80" fill="#181932" stroke="#2a2c4a" stroke-width="3"/>
+          <circle cx="100" cy="100" r="50" fill="none" stroke="#2a2c4a" stroke-width="3"/>
+          <line x1="100" y1="50" x2="100" y2="150" stroke="#2a2c4a" stroke-width="6"/>
+          <line x1="50" y1="100" x2="150" y2="100" stroke="#2a2c4a" stroke-width="6"/>
+          <circle cx="100" cy="100" r="14" fill="#0d0e1a" stroke="#2a2c4a" stroke-width="4"/>
+        </svg>
+
+        <!-- IMAGEM AQUI: assets/hero/bg-laboratorio.webp  (quadrada, 2048 x 2048) -->
+        <div class="slot frame frame-hero">
+          <span class="slot-label">[Imagem principal · assets/hero/bg-laboratorio.webp]</span>
+          <img src="assets/hero/menu.png" alt="Menu do jogo." data-slot-img>
+        </div>
+      </div>
+    </section>
+
+<section id="historia" class="band">
+      <div class="wrap story">
+        <div class="story-text">
+          <div class="kicker">Incógnita</div>
+          <h2>História</h2>
+          <p>...</p>
+          <p class="pull">...</p>
+        </div>
+
+        <!-- IMAGEM AQUI: assets/about/laboratorio.webp  (proporção 4:3) -->
+        <div class="slot frame frame-story">
+          <span class="slot-label">[Ilustração · assets/about/laboratorio.webp]</span>
+          <img src="assets/about/laboratorio.webp" alt="Cena do jogo: o protagonista caminha à noite entre construções cobertas de névoa" data-slot-img>
+        </div>
+      </div>
+    
+    </section>
+
+<section id="capitulos"><div class="wrap section">
+      <div class="head">
+        <div class="kicker">Do cinza à cor</div>
+        <h2>Capítulos</h2>
+      </div>
+      <div class="cards">
+        <article class="plaque plaque-1">
+          <div class="plaque-top"><span class="label">Capítulo I</span><span class="tag">Demo</span></div>
+          <h3>Capítulo 1</h3>
+          <p>Demo: ...</p>
+        </article>
+</div></div>
+    </section>
+
+<section id="personagens" class="band">
+      <div class="wrap section">
+        <div class="head"><h2>Personagens "Principais"</h2></div>
+        <div class="chars">
+          <article class="char">
+            <!-- IMAGEM AQUI: assets/characters/g.webp  (retrato 3:4) -->
+            <div class="slot frame frame-char">
+              <span class="slot-label"></span>
+              <img src="assets/characters/g.png" alt="G, assistente do laboratório" data-slot-img>
+            </div>
+            <div class="char-text">
+              <div class="kicker">Protagonista</div>
+              <h3>G</h3>
+              <p>...</p>
+            </div>
+          </article>
+          <article class="char">
+            <!-- IMAGEM AQUI: assets/characters/cientista.webp  (retrato 3:4) -->
+            <div class="slot frame frame-char">
+              <img src="assets/characters/cientista.png" alt="O Cientista, criador do experimento" data-slot-img>
+            </div>
+            <div class="char-text">
+              <div class="kicker">Mistério central</div>
+              <h3>O Cientista</h3>
+              <p>...</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    
+    </section>
+
+<section id="recursos"><div class="wrap section">
+      <div class="head"><h2>Recursos</h2></div>
+      <div class="shots">
+        <figure><img src="godot.webp" alt="feito pra fazer o jogo" loading="lazy"><figcaption class="label">Godot</figcaption></figure>
+        <figure><img src="ase.webp" alt="feito pra fazer o design grafico" loading="lazy"><figcaption class="label">Piskel</figcaption></figure>
+      </div>
+      <div class="cards cards-features">
+        <article class="feature">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#e8a94a" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><rect x="11" y="4" width="18" height="32" rx="9"/><line x1="20" y1="4" x2="20" y2="16"/></svg>
+          <h3>Controle de Precisão no Mouse</h3>
+          <p>...</p>
+        </article>
+        <article class="feature">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#e8a94a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h11a3 3 0 0 1 3 3v22a3 3 0 0 0-3-3H6z"/><path d="M34 8H23a3 3 0 0 0-3 3v22a3 3 0 0 1 3-3h11z"/></svg>
+          <h3>Dicionário de Libras</h3>
+          <p>Dicionário de sinais com animações e aprendizado sem punição: errar nunca faz perder progresso.</p>
+        </article>
+        <article class="feature feature-todo">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#6fae98" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="30" r="5"/><line x1="17" y1="30" x2="17" y2="8"/><path d="M17 8l15-3v20"/><circle cx="27" cy="25" r="5"/></svg>
+          <h3>Trilha sonora</h3>
+          <!-- TEXTO AQUI: descreva a música do jogo -->
+          <p>[Escreva aqui o que a música faz no jogo]</p>
+        </article>
+      </div>
+    </div>
+    </section>
+
+<section id="inspiracoes" class="band">
+      <div class="wrap section">
+        <div class="head"><h2>Inspirações</h2></div>
+        <div class="refs">
+          <article class="ref">
+            <!-- IMAGEM AQUI: assets/inspiracoes/danganronpa.webp  (16:9) -->
+            <div class="slot frame frame-ref">
+              <span class="slot-label">[Imagem · assets/inspiracoes/danganronpa.webp]</span>
+              <img src="danga.webp" alt="Arte de Danganronpa" loading="lazy" data-slot-img>
+            </div>
+            <div class="label label-brass">Arte</div>
+            <h3>Danganronpa</h3>
+            <p>Cutscenes com estilo anime e narrativa envolvente.</p>
+          </article>
+          <article class="ref">
+            <!-- IMAGEM AQUI: assets/inspiracoes/obra-dinn.webp  (16:9) -->
+            <div class="slot frame frame-ref">
+              <span class="slot-label">[Imagem · assets/inspiracoes/obra-dinn.webp]</span>
+              <img src="THE.jpg" alt="Cena de Return of the Obra Dinn" loading="lazy" data-slot-img>
+            </div>
+            <div class="label label-brass">Dedução</div>
+            <h3>Return of the Obra Dinn</h3>
+            <p>Observar, relacionar pistas e concluir a verdade por conta própria.</p>
+          </article>
+          <article class="ref">
+            <!-- IMAGEM AQUI: assets/inspiracoes/ace-attorney.webp  (16:9) -->
+            <div class="slot frame frame-ref">
+              <span class="slot-label">[Imagem · assets/inspiracoes/ace-attorney.webp]</span>
+              <img src="ace.jpg" alt="Cena de Ace Attorney" loading="lazy" data-slot-img>
+            </div>
+            <div class="label label-brass">Diálogo</div>
+            <h3>Ace Attorney</h3>
+            <p>Visual Novel com mecânica de multi-escolha.</p>
+          </article>
+        </div>
+      </div>
+    
+    </section>
+
+<section id="criadores">
+      <div class="wrap section">
+        <div class="head">
+          <div class="kicker kicker-teal">Por trás do silêncio</div>
+          <h2>Criadores</h2>
+          <p class="lead">Incógnita é feito por uma equipe independente de quatro pessoas, unidas pela vontade de contar uma história em Libras.</p>
+        </div>
+        <div class="makers">
+          <article class="maker">
+            <!-- IMAGEM AQUI: assets/team/criador-1.webp  (quadrada 1:1) -->
+            <div class="slot frame frame-maker">
+              <span class="slot-label">[Foto · assets/team/criador-1.webp]</span>
+              <img src="assets/team/bin.jpg" alt="Retrato de [Bin]" data-slot-img>
+            </div>
+            <div class="kicker">[Função · Documentação, Programação, Narrativa]</div>
+            <h3>Bin Almeida</h3>
+            <!-- TEXTO AQUI: uma ou duas frases sobre a pessoa e o que ela fez no jogo -->
+            <p>Responsável pela documentação, programação e narrativa do jogo! Ajudou também na produção de arte e efeitos sonoros.</p>
+          </article>
+          <article class="maker">
+            <!-- IMAGEM AQUI: assets/team/criador-2.webp  (quadrada 1:1) -->
+            <div class="slot frame frame-maker">
+              <span class="slot-label">[Foto · assets/team/criador-2.webp]</span>
+              <img src="assets/team/criador-2.webp" alt="Retrato de [Isaac]" data-slot-img>
+            </div>
+            <div class="kicker">[Função · Programador do Jogo]</div>
+            <h3>Isaac Gonçalves</h3>
+            <!-- TEXTO AQUI: uma ou duas frases sobre a pessoa e o que ela fez no jogo -->
+            <p>Responsável pelo desenvolvimento da parte técnica do jogo e efeitos sonoros! Ele contribuiu com o design das mecânicas do jogo.</p>
+          </article>
+          <article class="maker">
+            <!-- IMAGEM AQUI: assets/team/criador-3.webp  (quadrada 1:1) -->
+            <div class="slot frame frame-maker">
+              <span class="slot-label">[Foto · assets/team/criador-3.webp]</span>
+              <img src="assets/team/criador-3.webp" alt="Retrato de [Morgan]" data-slot-img>
+            </div>
+            <div class="kicker">[Função · Designer, Arte e Efeitos Sonoros]</div>
+            <h3>Morgan Bittencourt</h3>
+            <!-- TEXTO AQUI: uma ou duas frases sobre a pessoa e o que ela fez no jogo -->
+            <p>Responsável pelo design, arte e efeitos sonoros do jogo, ajudou também na narrativa! Contribuiu com o desenvolvimento do site.</p>
+          </article>
+          <article class="maker">
+            <!-- IMAGEM AQUI: assets/team/criador-4.webp  (quadrada 1:1) -->
+            <div class="slot frame frame-maker">
+              <span class="slot-label">[Foto · assets/team/criador-4.webp]</span>
+              <img src="assets/team/Gui.png" alt="Retrato de [Guilherme]" data-slot-img>
+            </div>
+            <div class="kicker">[Função · Arquiteto/Analista de Dados]</div>
+            <h3>Guilherme Monteiro</h3>
+            <!-- TEXTO AQUI: uma ou duas frases sobre a pessoa e o que ela fez no jogo -->
+            <p>Responsável pelo design arquitetônico e análise de dados do jogo! Ele também contribuiu com o desenvolvimento do site.</p>
+          </article>
+        </div>
+      </div>
+    
+    </section>
+    <section id="investigue"><div class="wrap section">
+      <div class="head">
+        <div class="kicker kicker-teal">Mini-jogo · Capítulo 0</div>
+        <h2>Investigue o laboratório</h2>
+        <p class="lead">O laboratório está em silêncio total. Procure pistas, resolva os enigmas, abra o cofre e <strong>libere o acesso à demo</strong>. Jogo 100% visual.</p>
+      </div>
+      <div class="game" id="game">
+        <noscript><p class="game-noscript">O mini-jogo precisa de JavaScript ligado para funcionar.</p></noscript>
+      </div>
+    </div></section>
+
+<section id="demo" class="cta">
+      <div class="walker" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <div class="kicker kicker-teal">Acesso antecipado</div>
+        <h2>Seja um dos primeiros a jogar</h2>
+        <p class="cta-text" id="demo-texto">A demo de Incógnita é para quem investiga. Abra o cofre do laboratório para liberar o acesso.</p>
+
+        <div class="demo-lock" id="demo-lock">
+          <svg class="cadeado" viewBox="0 0 24 24" width="64" height="64" shape-rendering="crispEdges" aria-hidden="true">
+            <path class="arco" d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="#9a9ea0" stroke-width="2"/>
+            <rect x="4" y="11" width="16" height="11" fill="#e8a94a"/><rect x="4" y="11" width="16" height="2" fill="#f2d27a"/>
+            <rect x="11" y="15" width="2" height="4" fill="#0d0e1a"/>
+          </svg>
+          <div class="demo-lock-txt"><strong>Demo trancada</strong><span>Complete o mini-jogo “Investigue o laboratório” para destravar.</span></div>
+          <a class="btn" href="#investigue">Ir para o mini-jogo</a>
+        </div>
+
+        <form id="form-demo" class="form" novalidate hidden>
+          <label for="email" class="label label-teal">Seu melhor e-mail</label>
+          <div class="form-row">
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@exemplo.com">
+            <button type="submit" class="btn" id="form-btn">Garantir Meu Acesso à Demo</button>
+          </div>
+          <!-- origem enviada junto com o e-mail (o backend grava na coluna "origem") -->
+          <input type="hidden" name="origem" value="landing_page">
+          <div id="form-msg" class="form-msg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div><span class="wordmark-small">Incógnita</span> · feito por uma equipe independente de quatro pessoas</div>
+    <div>Jogo para PC · mouse e teclado · Libras e português</div>
+  </footer>
+
+</body>
+</html>
